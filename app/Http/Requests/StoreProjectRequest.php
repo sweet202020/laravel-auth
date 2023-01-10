@@ -13,7 +13,7 @@ class StoreProjectRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,25 @@ class StoreProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|unique:projects,title|min:5|max:100',
+            'description' => 'required|max:300',
+            'difficulty' => 'required|max:30',
+            'language' => 'required|max:50'
+        ];
+    }
+    public function messages()
+    {
+        return [
+
+            'title.required' => 'il titolo e` richiesto',
+            'title.unique' => 'il titolo deve essere univoco',
+            'title.min' => 'il titolo deve contenere almeno :min caratteri',
+            'title.max' => 'il titolo puo` contenere massimo :max caratteri',
+            'description.required' => 'la descrizione e` richiesta',
+            'description.max' => 'la descrizione puo` contenere massimo :max caratteri',
+            'difficulty.max' => 'la difficolta puo contenere solo :max caratteri',
+            'language.max' => 'il linguaggio puo contenere solo :max caratteri',
+            'language.required' => 'il linguaggio e` richiesto',
         ];
     }
 }
