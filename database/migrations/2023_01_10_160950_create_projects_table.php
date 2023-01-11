@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('description');
-            $table->string('Difficulty');
-            $table->string('Language');
+            $table->string('difficulty');
+            $table->string('language');
             $table->timestamps();
         });
     }

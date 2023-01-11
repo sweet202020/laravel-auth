@@ -3,7 +3,7 @@
 <section class="products py-5">
     <div class="container">
         <div class="heading d-flex justify-content-between">
-            <h2>projects</h2>
+            <h2>My Projects</h2>
             <div>
                 <a href="{{route('admin.projects.create')}}" class="btn btn-primary">Add projects</a>
             </div>
@@ -29,6 +29,7 @@
                         <th>Description</th>
                         <th>Difficulty</th>
                         <th>Language</th>
+                        <th>Actions</th>
 
                     </tr>
                 </thead>
@@ -73,7 +74,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Il fumetto sarà cancellato irreversibilmente. sei sicuro??
+                                            Il progetto sarà cancellato irreversibilmente. sei sicuro??
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateProjectRequest extends FormRequest
@@ -24,7 +25,30 @@ class UpdateProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => [
+                'required',
+                Rule::unique('projects')->ignore($this->project->id),
+                'min:5',
+                'max:100'
+            ],
+            'description' => 'required|max:500',
+            'difficulty' => 'required|max:30',
+            'language' => 'required|max:50'
+        ];
+    }
+    public function messages()
+    {
+        return [
+
+            'title.required' => 'il titolo e` richiesto, non eliminarlo',
+            'title.min' => 'il titolo deve contenere almeno :min caratteri',
+            'title.max' => 'il titolo puo` contenere massimo :max caratteri',
+            'description.required' => 'la descrizione e` richiesta, non eliminarla',
+            'description.max' => 'la descrizione puo` contenere massimo :max caratteri',
+            'difficulty.required' => 'la difficolta` e` richiesta, non eliminarla',
+            'difficulty.max' => 'la difficolta` puo` contenere solo :max caratteri',
+            'language.max' => 'il linguaggio puo` contenere solo :max caratteri',
+            'language.required' => 'il linguaggio e` richiesto, non eliminarlo',
         ];
     }
 }

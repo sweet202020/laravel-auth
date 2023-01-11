@@ -40,8 +40,9 @@ class StoreProjectRequest extends FormRequest
             'title.max' => 'il titolo puo` contenere massimo :max caratteri',
             'description.required' => 'la descrizione e` richiesta',
             'description.max' => 'la descrizione puo` contenere massimo :max caratteri',
-            'difficulty.max' => 'la difficolta puo contenere solo :max caratteri',
-            'language.max' => 'il linguaggio puo contenere solo :max caratteri',
+            'difficulty.max' => 'la difficolta` puo` contenere solo :max caratteri',
+            'difficulty.required' => 'la difficolta` e` richiesta',
+            'language.max' => 'il linguaggio puo` contenere solo :max caratteri',
             'language.required' => 'il linguaggio e` richiesto',
         ];
     }

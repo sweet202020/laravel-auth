@@ -8,7 +8,7 @@
             <p>{{$project->description}}</p>
             <div class="meta">
                 <div class="difficulty">
-                    price: {{$project->difficulty}}
+                    difficulty: {{$project->difficulty}}
                 </div>
                 <div>
                     language:{{$project->language}}
