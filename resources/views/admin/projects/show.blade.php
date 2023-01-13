@@ -6,6 +6,7 @@
         <div class="details">
             <h1>{{$project->title}}</h1>
             <p>{{$project->description}}</p>
+            <img src="{{asset('storage/'. $project->cover_image)}}" alt="">
             <div class="meta">
                 <div class="difficulty">
                     difficulty: {{$project->difficulty}}

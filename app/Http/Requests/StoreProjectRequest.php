@@ -28,7 +28,7 @@ class StoreProjectRequest extends FormRequest
             'description' => 'required|max:300',
             'difficulty' => 'required|max:30',
             'language' => 'required|max:50',
-            'cover_image' => 'nullable|image|300'
+            'cover_image' => 'nullable|image|max:300'
         ];
     }
     public function messages()
@@ -45,6 +45,7 @@ class StoreProjectRequest extends FormRequest
             'difficulty.required' => 'la difficolta` e` richiesta',
             'language.max' => 'il linguaggio puo` contenere solo :max caratteri',
             'language.required' => 'il linguaggio e` richiesto',
+            'cover_image.max' => 'il file e` troppo grande'
         ];
     }
 }
