@@ -2,8 +2,8 @@
 @section('content')
 <section class="products py-5">
     <div class="container">
-        <div class="heading d-flex justify-content-between">
-            <h2>My Projects</h2>
+        <div class="heading d-flex justify-content-between my-3">
+            <h2 class="">My Projects</h2>
             <div>
                 <a href="{{route('admin.projects.create')}}" class="btn btn-primary">Add projects</a>
             </div>
