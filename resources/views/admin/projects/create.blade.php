@@ -2,7 +2,7 @@
 @section('content')
 
 <h2 class="text-center text-uppercase mt-3">add project</h2>
-<form action="{{route('admin.projects.store')}}" method="POST">
+<form action="{{route('admin.projects.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="container">
         <div class="mb-3">
@@ -14,6 +14,12 @@
             <textarea placeholder="project's description here" class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
 
         </div>
+        <div class="mb-3">
+            <label for="coverimage" class="form-label">cover image</label>
+            <input type="file" name="coverimage" id="coverimage" class="form-control" placeholder="add cover image " aria-describedby="helpId">
+
+        </div>
+
         <div class="mb-3">
             <label for="difficulty" class="form-label">difficulty</label>
             <input type="text" class="form-control" name="difficulty" id="difficulty" aria-describedby="helpId" placeholder="project's difficulty ">

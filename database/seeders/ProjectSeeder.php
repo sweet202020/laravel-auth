@@ -21,6 +21,7 @@ class ProjectSeeder extends Seeder
             $project = new Project();
             $project->title = $faker->sentence(3);
             $project->slug = Str::slug($project->title, '-');
+            $project->cover_image = 'placeholder/' . 'default.webp';
             $project->description = $faker->sentence(50);
             $project->difficulty = $faker->randomElement(['easy', 'medium', 'hard']);
             $project->language = $faker->randomElement(['php', 'javascript', 'html', 'css', 'c++']);
