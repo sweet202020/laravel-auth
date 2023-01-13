@@ -15,8 +15,8 @@
 
         </div>
         <div class="mb-3">
-            <label for="coverimage" class="form-label">cover image</label>
-            <input type="file" name="coverimage" id="coverimage" class="form-control" placeholder="add cover image " aria-describedby="helpId">
+            <label for="cover_image" class="form-label">cover image</label>
+            <input type="file" name="cover_image" id="cover_image" class="form-control" placeholder="add cover image " aria-describedby="helpId">
 
         </div>
 

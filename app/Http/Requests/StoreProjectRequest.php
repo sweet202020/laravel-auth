@@ -45,7 +45,9 @@ class StoreProjectRequest extends FormRequest
             'difficulty.required' => 'la difficolta` e` richiesta',
             'language.max' => 'il linguaggio puo` contenere solo :max caratteri',
             'language.required' => 'il linguaggio e` richiesto',
-            'cover_image.max' => 'il file e` troppo grande'
+            'cover_image.max' => 'il file e` troppo grande',
+            'cover_image.image' => 'il file deve essere un immagine'
+
         ];
     }
 }

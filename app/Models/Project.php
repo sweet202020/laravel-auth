@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 class Project extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'slug', 'difficulty', 'language'];
+    protected $fillable = ['title', 'description', 'slug', 'difficulty', 'language', 'cover_image'];
 
     public static function generateSlug($title)
     {

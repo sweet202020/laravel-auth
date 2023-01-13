@@ -6,7 +6,13 @@
         <div class="details">
             <h1>{{$project->title}}</h1>
             <p>{{$project->description}}</p>
-            <img src="{{asset('storage/'. $project->cover_image)}}" alt="">
+            @if($project->cover_image)
+            <img src="{{asset('storage/' . $project->cover_image)}}" alt="">
+            @else
+            <div class="placeholder-glow p-5 bg-danger">
+                placeholder
+            </div>
+            @endif
             <div class="meta">
                 <div class="difficulty">
                     difficulty: {{$project->difficulty}}

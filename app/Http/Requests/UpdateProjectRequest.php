@@ -33,7 +33,9 @@ class UpdateProjectRequest extends FormRequest
             ],
             'description' => 'required|max:500',
             'difficulty' => 'required|max:30',
-            'language' => 'required|max:50'
+            'language' => 'required|max:50',
+            'cover_image' => 'nullable|image|max:300'
+
         ];
     }
     public function messages()
@@ -49,6 +51,8 @@ class UpdateProjectRequest extends FormRequest
             'difficulty.max' => 'la difficolta` puo` contenere solo :max caratteri',
             'language.max' => 'il linguaggio puo` contenere solo :max caratteri',
             'language.required' => 'il linguaggio e` richiesto, non eliminarlo',
+            'cover_image.max' => 'il file e` troppo grande',
+            'cover_image.image' => 'il file deve essere un immagine'
         ];
     }
 }

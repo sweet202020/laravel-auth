@@ -26,6 +26,7 @@
                     <tr>
                         <th>Id</th>
                         <th>Title</th>
+                        <th>Image</th>
                         <th>Description</th>
                         <th>Difficulty</th>
                         <th>Language</th>
@@ -38,6 +39,14 @@
                     <tr class="table-primary">
                         <td scope="row">{{$project->id}}</td>
                         <td>{{$project->title}}</td>
+                        <td> @if($project->cover_image)
+                            <img width="100" src="{{asset('storage/' . $project->cover_image)}}" alt="">
+                            @else
+                            <div class="placeholder-glow p-4 bg-danger">
+                                placeholder
+                            </div>
+                            @endif
+                        </td>
                         <td>{{$project->description}}</td>
                         <td>{{$project->difficulty}}</td>
                         <td>{{$project->language}}</td>
