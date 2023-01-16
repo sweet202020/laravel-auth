@@ -1,6 +1,6 @@
 @extends('layouts.admin')
-
 @section('content')
+
 <div class="container">
     <div class="jumbotron">
         <h1 class="display-3">Jumbo heading</h1>
